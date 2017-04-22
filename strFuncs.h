@@ -9,19 +9,18 @@ public:
 	Chain();
 };
 
-template <class T>
 class Hash_Heap
 {
 public:
 	Hash_Heap(int size);
-	void insert(T value);
-	int lookup(T value);
-	void Delete(T value);
-	T deleteMax();
+	void insert(int value);
+	int lookup(int value);
+	void Delete(int value);
+	int deleteMax();
 	void printTable();
 private:
 	Chain *HashTable;
-	T *HeapTree;
+	int *HeapTree;
 	int HtreeEnd;
 	int TableSize;	
 };
