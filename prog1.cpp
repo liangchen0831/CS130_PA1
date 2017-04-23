@@ -2,6 +2,6 @@
 
 int main(){
 	Hash_Heap Data(10);
-	Data.printTable();
+	Data.lookup(0);
 	return 0;
 }

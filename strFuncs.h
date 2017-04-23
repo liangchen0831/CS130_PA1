@@ -13,16 +13,21 @@ class Hash_Heap
 {
 public:
 	Hash_Heap(int size);
+	void lookup(int value);
 	void insert(int value);
-	int lookup(int value);
 	void Delete(int value);
 	int deleteMax();
 	void printTable();
+	void printTree();
 private:
 	Chain *HashTable;
 	int *HeapTree;
 	int HtreeEnd;
-	int TableSize;	
+	int TableSize;
+
+	int Hash(int value){
+		return (value % TableSize);
+	};
 };
 
 
